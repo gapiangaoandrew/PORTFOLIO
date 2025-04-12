@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="portfolio.css">
+    <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo">
+            <a href="#">MyPortfolio</a>
+        </div>
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#skill">Skills</a>
+            <a href="#contact">Contacts</a>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Hello, I'm Andrew F. Gapiangao</h1>
+            <h2>BSIT-2C</h2>
+            <p>"You don’t have enemies. No one has enemies. There is no one you need to hurt."</p>
+            <p>-Thorfinn</p>
+        </div>
+        <img src="profile.jpg" alt="Profile Picture" class="profile-picture">
+    </section>
+    
+    <section class="about-me" id="about">
+        <h2>About Me</h2>
+        <p>
+            I'm a beginner in web development, eager to learn and grow in this field. 
+            I have a strong interest in HTML, CSS, and JavaScript, and I'm excited to explore how they work together to build amazing websites. 
+            Learning to code has been a dream of mine, and I'm committed to improving my skills step by step. 
+            I'm excited about the journey ahead and looking forward to creating my own projects in the future!
+        </p>
+    </section>
+
+    <section class="skill-me" id="skill">
+        <h2>Skills</h2>
+        <canvas id="skillsChart" width="350" height="300"></canvas>
+    </section>
+
+    <footer id="contact">
+        <p>Contact me at: andrewfloresgapiangao@gmail.com</p>
+        <p>Phone: +63 921 785 1945</p>
+        <p>Follow me on:
+          <a href="https://www.facebook.com/andrew.gapiangao">Facebook</a>,
+          <a href="https://www.instagram.com/kylerflrs/">Instagram</a>
+        </p>
+        <p>© 2025 Andrew F. Gapiangao</p>
+    </footer>
+ <script>
+        const ctx = document.getElementById('skillsChart').getContext('2d');
+        const skillsChart = new Chart(ctx, {
+          type: 'pie',
+          data: {
+            labels: ['Digital Literacy', 'Adaptability', 'Time Management', 'Problem Solving', 'Critical Thinking'],
+            datasets: [{
+              data: [30, 20, 20, 15, 15],
+              backgroundColor: [
+                '#FF6384',
+                '#36A2EB',
+                '#FFCE56',
+                '#4BC0C0',
+                '#9966FF'
+              ],
+              borderColor: '#000',
+              borderWidth: 1
+            }]
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+                position: 'bottom',
+                labels: {
+                  color: '#eee',
+                  padding: 15,
+                  font: {
+                    size: 14
+                  }
+                }
+              }
+            }
+          }
+        });
+      </script>
+</body>
+</html>
